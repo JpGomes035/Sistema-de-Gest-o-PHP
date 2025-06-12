@@ -1,0 +1,37 @@
+PROJETO: PROCONTROL
+Descrição do Sistema: O ProControl é uma solução de gestão empresarial avançada, desenvolvida em PHP, focada no gerenciamento de estoque, finanças, e-commerce e muito mais. Ideal para empresas que buscam otimizar suas operações, o ProControl oferece um conjunto abrangente de funcionalidades:
+
+Controle de Estoque: Gestão eficiente do inventário, incluindo alertas de baixa quantidade e geração automática de pedidos para reposição.
+Gestão Financeira: Controle de contas a pagar e receber, geração de boletos com opção de upload de PDFs para visualização futura.
+E-commerce Integrado: Catálogo online com produtos do sistema, incluindo opção de promoção, com integração direta ao WhatsApp do proprietário da loja.
+Gerenciamento de Clientes e Fornecedores: Cadastro, envio de e-mails e mensagens via WhatsApp diretamente pelo sistema.
+Geração de Pedidos: Pedidos de compra e venda com opções de controle de estoque e travas de segurança para evitar vendas de produtos esgotados.
+Relatórios Detalhados: Diversos relatórios, como produtos mais vendidos, pedidos de compra e venda, transporte, entre outros. Todos exportáveis para Excel.
+Sistema de Agendamento: Criação de agendamentos com alertas, atribuição de responsáveis e gerenciamento de ordens de serviço.
+Chat Interno: Comunicação entre usuários, com opção de envio de arquivos anexos.
+Backup: Realização de backup com um clique para segurança dos dados.
+Leitura e Processamento de XML: Armazenamento e listagem de informações processadas.
+Cadastro de Veículos e Transporte: Gerenciamento de veículos e operações de transporte.
+Sistema Responsivo: Adaptado para todos os tipos de telas, incluindo celulares, notebooks e computadores.
+Versão Atual: 1.7.36
+Atualização recente tem o catalogo enviando um email para o email da loja com os pedidos feitos.
+
+Ambiente do Sistema:
+
+Servidor: Localhost (com opção para hospedagem em nuvem para acesso remoto)
+Versão do PHP: 8.1
+Banco de Dados: MySQL (gerenciado via PHPMyAdmin), XAMPP 3.3.0
+Guia de Uso:
+
+Acesso: Visite o site procontrol.tech
+Login: Utilize o login padrão admin@gmail.com e senha 123456 para acessar o sistema.
+Relatórios: Filtre por datas e exporte diretamente para Excel.
+Comunicação: Envie e-mails ou mensagens de WhatsApp diretamente pelos contatos cadastrados.
+Pedidos: Crie pedidos de compra ou venda, com integração automática de controle de estoque.
+Backups: Utilize a função de backup com um clique para salvar os dados do sistema.
+Gerenciamento de Boletos: Gere, visualize e armazene boletos em PDF.
+Contato para Suporte e Informações:
+
+Desenvolvedor: João Pedro Gomes
+E-mail: contat.joao10@gmail.com
+Telefone: +55 35 98468-7649

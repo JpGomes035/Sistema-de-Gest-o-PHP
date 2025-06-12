@@ -1,0 +1,8 @@
+O controle de versão vai funcionar da seguinte forma:
+Toda atualização precisa ser relatado aqui o que foi atualizado no sistema
+
+1.7.27: Criado um banco de dados geral para controlar se o cliente pagou a mensalidade de acordo com ID do banco de dados privado do cliente e o banco de dados geral dos clientes. Contas-receber/pagar com clientes agora. Destino de pedidos compra e venda tem agora valor total do banco e é marcado como pago automaticamente, listagem de backups já realizados.
+
+1.7.29: Aprimorado para adicionar QRCODE no pagamento caso esteja pago = 'nao' no login. Controle para listagem de alertas internos (agendamentos e produtos sem estoque) tendo ali seu submenu com '!' quando tem algum alerta e foi retirado do Menu Inicial e do Cadastro os alertas em script.
+
+1.7.35: Sistema agora possui envio de email, listagem dos emails enviados, chat interno entre os usuarios e todos possuindo como enviar um anexo.

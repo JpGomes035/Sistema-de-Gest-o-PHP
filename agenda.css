@@ -1,0 +1,264 @@
+/* Estilo Geral */
+body {
+    background: linear-gradient(to bottom, #4daaaa, #a7a4a4);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Títulos */
+h1,
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: normal;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: #4daaaa;
+    outline: none;
+}
+
+/* Botões */
+input[type="submit"] {
+    padding: 10px 25px;
+    background-color: #4daaaa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #3c8888;
+}
+
+.btn-success {
+    background-color: #4daaaa;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #3c8888;
+}
+
+/* Container */
+.container {
+    padding: 20px 0;
+}
+
+/* Tabela */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ccc;
+    color: #333;
+}
+
+.table th {
+    background-color: #4daaaa;
+    color: white;
+    font-weight: bold;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Paginação */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination-item {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.pagination-link {
+    padding: 8px 15px;
+    background-color: #4daaaa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-link:hover {
+    background-color: #3c8888;
+}
+
+.pagination-link.active {
+    background-color: #3c8888;
+    font-weight: bold;
+}
+
+/* Descrição Expandida */
+.descricao-expandir {
+    cursor: pointer;
+    text-align: center;
+}
+
+.descricao-expandir.descricao-expandida {
+    white-space: normal;
+    text-align: center;
+}
+
+.descricao-expandir .descricao-resumida {
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+/* Estilo do contêiner do formulário */
+.form-control {
+    width: 100%;
+    max-width: 400px;
+    /* Limite a largura do campo */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select.form-control {
+    appearance: none;
+    /* Remove a seta padrão do navegador */
+    padding-right: 30px;
+    /* Espaço para a seta personalizada */
+    background-image: url('seta.png');
+    /* Use uma seta personalizada se desejar */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+select.form-control option {
+    padding: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Margem adicional entre os elementos */
+br+label {
+    margin-top: 15px;
+}
+
+
+.btn-expande-descricao {
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.btn-expande-descricao:hover {
+    color: #4daaaa;
+}
+
+th,
+tr,
+td {
+    font-weight: normal;
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    h1,
+    h2 {
+        font-size: 20px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px;
+    }
+
+    .pagination-link {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
