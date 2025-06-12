@@ -1,0 +1,186 @@
+/* Estilo global */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #2a9d8f, #264653);
+    margin: 0;
+    padding: 20px;
+    color: #080808;
+}
+
+/* Títulos */
+h1, h2 {
+    color: #0515f8;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+/* Formulário */
+form {
+    background-color: #9b9a9a;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Rótulos e inputs */
+label {
+    font-weight: 600;
+    color: #202020;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"], 
+input[type="number"], 
+textarea, 
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, 
+input[type="number"]:focus, 
+textarea:focus, 
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Botões */
+button[type="button"], 
+input[type="submit"], 
+a {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+button[type="button"]:hover, 
+input[type="submit"]:hover, 
+a:hover {
+    background-color: #0056b3;
+}
+
+.btn-adicionar {
+    background-color: #28a745;
+    font-weight: 600;
+}
+
+.btn-adicionar:hover {
+    background-color: #218838;
+}
+
+/* Parágrafos */
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #111111;
+}
+
+/* Ícone do menu */
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    font-size: 28px;
+    color: #11f0f0;
+    cursor: pointer;
+}
+
+/* Menu lateral */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #007bff;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    transition: width 0.3s ease;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+}
+
+#menu ul li {
+    margin-bottom: 20px;
+}
+
+#menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#menu ul li a:hover {
+    color: #f1f1f1;
+}
+
+/* Select de produtos */
+#produtos {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #007bff;
+}
+
+/* Botão de envio personalizado */
+.btn-enviar {
+    margin-top: 20px;
+    background-color: #ff4081;
+    color: #fff;
+    padding: 10px 24px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #c2185b;
+}
