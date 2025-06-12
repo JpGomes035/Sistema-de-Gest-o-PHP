@@ -1,0 +1,8 @@
+/* Ocultar elementos gráficos de plano de fundo */
+body {
+    background-image: none !important;
+
+}
+
+/* Outras regras de estilo para a versão de impressão */
+/* ... */

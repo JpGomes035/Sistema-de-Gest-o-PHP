@@ -1,0 +1,20 @@
+@media print {
+    body {
+        background-image: none !important;
+    }
+    .print-content {
+        visibility: visible;
+    }
+    .print-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .btn-editar, .btn-success, .acoes, .chart, .pagination, h5, .imprimir, .form-control, .btn, .nav-item {
+        display: none;
+    }
+    .print-only {
+        pointer-events: none !important;
+    }
+
+}
