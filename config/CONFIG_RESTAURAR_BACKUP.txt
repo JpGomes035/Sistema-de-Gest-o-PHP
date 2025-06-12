@@ -1,0 +1,22 @@
+Assunto: Solicitação de Backup do Banco de Dados do Cliente
+
+Prezado(a),
+
+Espero que esteja bem. Uma questão importante relacionada ao banco de dados do nosso cliente é sempre importante solicitar auxilio do João Pedro.
+
+Realizar um backup completo do banco de dados a partir do zero. Conforme nossas práticas de segurança e integridade dos dados, é crucial garantir que esse procedimento seja conduzido de forma precisa e eficiente.
+
+Para otimizar o processo e garantir a integridade das relações entre as tabelas, seguir esses passos abaixo:
+
+1. Realizar o restore(importar)backup completo do banco de dados, excluindo as tabelas `itens_pedido` e `itens_pedido_compra` inicialmente.
+2. Posteriormente, realizar o restore(importar)backup dessas duas tabelas específicas, levando em consideração suas chaves estrangeiras, para garantir a consistência dos dados durante a importação.
+
+Se possível, avisar o João por E-mail ou entrar em contato no WhatsApp e solicitar auxilio.
+
+
+Fico à disposição para discutir qualquer detalhe adicional que possa surgir.
+
+Atenciosamente,
+João Pedro Gomes.
+Desenvolvedor e Criador da ProControl.
+contato.joao10@gmail.com - (35) 984687649.

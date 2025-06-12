@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    background-color: #343a40;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #343a40;
+    color: white;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #ddd;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #009688;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #00796b;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.botao:hover {
+    background-color: #00796b;
+    color: #e0f2f1;
+    border-color: #004d40;
+}
+
+.botao:active {
+    background-color: #004d40;
+    border-color: #00332c;
+}
+
+.mensagem {
+    font-size: 1.1em;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.acao-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.acao-btn:hover {
+    background-color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+
+    .table th,
+    .table td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .botao {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .mensagem {
+        font-size: 1em;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .table th,
+    .table td {
+        font-size: 0.8em;
+        padding: 6px;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .botao {
+        padding: 10px;
+        margin: 8px 0;
+    }
+
+    .mensagem {
+        font-size: 0.9em;
+        padding: 6px;
+    }
+}
+
+.endereco {
+    display: none;
+    margin-top: 10px;
+}
+
+.endereco label {
+    display: block;
+    margin: 5px 0;
+}
+
+.endereco input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

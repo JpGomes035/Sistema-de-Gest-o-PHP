@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel</title>
+    <style>
+        /* Estilo para o cabeçalho da tabela */
+        th {
+            background-color: #333;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        /* Estilo para as células da tabela */
+        td {
+            background-color: #f9f9f9;
+            color: #000;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        /* Adicione mais estilos conforme necessário */
+    </style>
+
+</head>
+
+<body>
+    <table><tr><th>ID</th><th>Nome</th><th>Numero Produto</th><th>Categoria</th><th>Quantidade</th><th>Fornecedor</th><th>Preco venda</th><th>Qnt_Vendas</th><th>Preco Custo</th><th>Preco Bruto</th><th>Preco Promocional</th> <th>Catalogo </th><th>Promocao </th></tr><tr><td>70</td><td>Notebook Acer</td><td>15095</td><td>Informática</td><td>2</td><td>ProControl</td><td>2500</td><td>no registry</td><td>no registry</td><td>no registry</td><td>1999</td><td>s</td><td>s</td></tr></table></body>
+
+</html>

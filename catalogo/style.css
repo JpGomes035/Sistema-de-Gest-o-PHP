@@ -1,0 +1,660 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #0d0d0d, #333, #0d0d0d);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+    border-bottom: 2px solid #555;
+    transition: background 0.3s ease;
+}
+
+.header:hover {
+    background: linear-gradient(45deg, #111, #444, #111);
+    border-bottom: 2px solid #777;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-container {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.logo {
+    width: 300px;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.empresa-header {
+    flex: 1 1 auto;
+    font-size: 20px;
+    color: #f0f0f0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.empresa-header:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+.empresa-header p {
+    margin: 5px 0;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.empresa-header p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.empresa-header p:last-child {
+    font-style: italic;
+    color: #ddd;
+}
+
+.empresa-header p:hover {
+    color: #21d7e4;
+}
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+    }
+
+    .empresa-header {
+        width: 100%;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+}
+
+
+/* Estilo para links */
+a {
+    color: #009688;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00796b;
+}
+
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+}
+
+.filtros select,
+.filtros input {
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.filtros button {
+    background-color: #009688;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filtros button:hover {
+    background-color: #00796b;
+}
+
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.produto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.produto h2 {
+    font-size: 1.4em;
+    margin: 10px 0;
+    color: #343a40;
+}
+
+.produto p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0;
+}
+
+.produto .preco {
+    font-size: 1.2em;
+    color: #e67e22;
+    margin: 10px 0;
+}
+
+.botao-car {
+    display: inline-block;
+    background-color: #009688;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #009688;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.botao-car:hover {
+    background-color: #218838;
+    color: #e0f2f1;
+    border-color: #1e7e34;
+}
+
+.botao-car:active {
+    background-color: #1e7e34;
+    border-color: #1c7430;
+}
+
+.botao-car-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+    .botao-car-container {
+        top: 10px;
+        bottom: auto;
+        right: 10px;
+    }
+
+    .botao-car {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    .botao-texto {
+        display: none;
+    }
+}
+
+/* Estilo da paginação */
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #009688;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #009688;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .produto {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .catalogo {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .botao-car {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .botao-car-container {
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+}
+
+/* Estilo geral do footer */
+footer.empresa-info {
+    position: relative;
+    /* Mude de fixed para relative */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    /* Fundo preto */
+    color: #fff;
+    /* Texto branco */
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    transition: bottom 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Estilo dos parágrafos no footer */
+footer.empresa-info p {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 0;
+}
+
+/* Estilo dos textos fortes */
+footer.empresa-info p strong {
+    color: #fff;
+}
+
+/* Estilo do link de voltar */
+footer.empresa-info p a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer.empresa-info p a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Mostrar o footer quando rolar até o final da página */
+footer.empresa-info.show-footer {
+    bottom: 0;
+}
+
+/* Estilo para o link do footer */
+footer.empresa-info p a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer.empresa-info p a:hover {
+    color: #fff;
+}
+
+/* Ajustes para dispositivos móveis */
+.botao-carrinho-visualizar {
+    display: inline-block;
+    background-color: #009688;
+    color: #fff;
+    padding: 12px;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #009688;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    position: fixed;
+    /* Fixa a posição na tela */
+    top: 10px;
+    /* Distância do topo */
+    right: 10px;
+    /* Distância do lado direito */
+    z-index: 1000;
+    /* Garantir que esteja acima de outros elementos */
+}
+
+.botao-carrinho-visualizar i {
+    font-size: 1.2em;
+    /* Ajuste o tamanho do ícone conforme necessário */
+    margin: 0;
+    padding: 0;
+}
+
+.botao-carrinho-visualizar:hover {
+    background-color: #218838;
+    color: #e0f2f1;
+    border-color: #1e7e34;
+}
+
+.botao-carrinho-visualizar:active {
+    background-color: #1e7e34;
+    border-color: #1c7430;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+    .botao-carrinho-visualizar {
+        padding: 10px;
+        font-size: 1.5em;
+        border-radius: 50%;
+        background-color: #009688;
+        color: #fff;
+        border: none;
+    }
+
+    .botao-carrinho-visualizar i {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+.produto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto.promocao {
+    border-color: #e67e22;
+}
+
+.produto .faixa-promocao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #e74c3c;
+    /* Cor vermelha para um destaque maior */
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    /* Apenas a parte inferior arredondada */
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra para dar profundidade */
+}
+
+
+
+.produto .preco-promocional {
+    font-size: 1.4em;
+    color: #c0392b;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.produto .preco {
+    font-size: 1.2em;
+    color: #e67e22;
+    margin: 10px 0;
+}
+
+.produto .preco-riscado {
+    text-decoration: line-through;
+    /* Para mostrar que o preço original está riscado */
+}
+
+.produto .preco-promocional {
+    font-size: 1.4em;
+    color: #c0392b;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.input-quantidade {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-quantidade:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.input-quantidade::-webkit-outer-spin-button,
+.input-quantidade::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-quantidade[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.user-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.user-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.user-form p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.user-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.user-form input[type="text"],
+.user-form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.user-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Filtros */
+.filtros {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.filtros select,
+.filtros input {
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    max-width: 100%;
+}
+
+.filtros button {
+    background-color: #009688;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filtros button:hover {
+    background-color: #00796b;
+}
+

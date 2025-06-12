@@ -1,0 +1,22 @@
+Para configuração inicial do banco de dados, é preciso pegar as informações do banco na hora de subir para a nuvem e alterar os arquivos de conexão, exemplo abaixo: 
+
+"<?php
+// Atualizar para as configurações do DB do cliente quando estiver hospedado
+$servername = 'localhost';
+$database = 'estoque'; //nomedodatabase EX: 9128329389_estoque
+$username = 'root'; //nomedouser EX: 01930129_ProControl
+$password = ''; //Password para conectar no banco de dados EX: SENHA1234*
+
+$conexao = mysqli_connect($servername, $username, $password, $database);"
+
+Os arquivos de conexão são: 
+conexao.php
+conexao_clients.php(vai ser sempre o mesmo pois todos os clientes vao conectar no banco de dados geral)
+conexao_alert.php(alertas do sistema da procontrol, Vai ser o mesmo sempre)
+backup/backup.php
+
+no arquivo backup.php a conexão vai ser a mesma que a conexão.php pois é o mesmo banco de dados(banco de dados privado).
+
+
+
+

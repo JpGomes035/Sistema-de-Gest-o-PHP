@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #b3e0e0, #1e1e1e);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#container {
+    display: flex;
+    width: 200%;
+    max-width: 1000px;
+    height: 85vh;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* ===== Group List ===== */
+#group-list,
+#group-list-container {
+    width: 30%;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#group-list-container h3 {
+    font-size: 1.2em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#group-list-items,
+#group-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#group-list-items li,
+#group-list li {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 8px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #ddd;
+}
+
+#group-list-items li:hover,
+#group-list li:hover {
+    background-color: #e6f0ff;
+    transform: scale(1.02);
+}
+
+.group-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+.group-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.group-name {
+    font-weight: 500;
+    font-size: 1em;
+    color: #333;
+}
+
+.group-last-message {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+#group-list-footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+    border-bottom-left-radius: 12px;
+}
+
+/* ===== Chat Area ===== */
+#chat-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    border-top-right-radius: 12px;
+}
+
+#header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    border-top-right-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#chat-box {
+    flex: 1;
+    padding: 15px;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ===== Messages ===== */
+.message {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 12px;
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.message.sent {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+.message.received {
+    align-self: flex-start;
+    background-color: #e9ecef;
+    color: #333;
+    border-bottom-left-radius: 0;
+}
+
+.message .sender {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.message .content {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.message .timestamp {
+    font-size: 0.75em;
+    color: #adb5bd;
+    margin-top: 8px;
+    align-self: flex-end;
+}
+
+/* ===== Input & Buttons ===== */
+#input-container {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+
+#message-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#message-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button,
+a {
+    padding: 12px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 5px;
+}
+
+button:hover,
+a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.back-button {
+    display: inline-block;
+    text-align: center;
+}
+
+.input-file-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.file-label {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
+    display: inline-block;
+    width: fit-content;
+}
+
+.file-label:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.file-input {
+    display: none;
+}
+
+.file-name {
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+}
+
+#nome-grupo {
+    width: 90%;
+    padding: 12px 15px;
+    font-size: 1em;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px 0;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+#nome-grupo:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.back-button {
+    display: block;
+    margin-top: 15px;
+    background-color: #6c757d;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+/* Modal geral */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Botão fechar */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+#delete-group-btn {
+    padding: 10px 20px;
+    background-color: #e03e3e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(224, 62, 62, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
+}
+
+#delete-group-btn:hover {
+    background-color: #b72b2b;
+    box-shadow: 0 6px 10px rgba(183, 43, 43, 0.6);
+    transform: translateY(-2px);
+}
+
+#delete-group-btn:active {
+    background-color: #8c2121;
+    box-shadow: 0 2px 4px rgba(140, 33, 33, 0.8);
+    transform: translateY(0);
+}
+
+#group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    color: white;
+}
+
+#group-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+#show-members-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#show-members-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#members-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#members-list li {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1em;
+    color: #333;
+}
+
+#members-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#members-list img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}

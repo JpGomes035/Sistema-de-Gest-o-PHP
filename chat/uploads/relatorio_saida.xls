@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <style>
+    /* Estilo para o cabeçalho da tabela */
+    th {
+        background-color: #333;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        border: 2px solid black;
+    }
+
+    /* Estilo para as células da tabela */
+    td {
+        background-color: #f9f9f9;
+        color: #000;
+        text-align: center;
+        border: 1px solid #000;
+    }
+
+    /* Adicione mais estilos conforme necessário */
+</style>
+</head>
+<body>
+<table><tr><th>ID</th><th>Valor</th><th>Descrição</th><th>Forma de Pagamento</th><th>Responsável</th><th>Data</th><th>Data de Registro</th><th>Usuário que registrou</th><th>Nome do Banco</th></tr><tr><td>27</td><td>150.25</td><td>Pagamento do Carro</td><td>Pix</td><td>João</td><td>01/02/2024</td><td>26/01/2024</td><td>2</td><td>Caixa</td></tr><tr><td colspan="7"><b>Total:</b></td><td>150,25</td></tr></table></body>
+</html>
